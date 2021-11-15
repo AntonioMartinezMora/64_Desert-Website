@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400&display=swap');
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root{
+    --main: #5E6472;
+    --red: #FFA69E;
+    --green: #B8F2E6;
+}
+
+body{
+    font-family: 'Ubuntu', sans-serif;
+}
+
+nav{
+    width: 100%;
+    height: 8vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.1);
+}
+
+.nav__container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    padding: 1rem;
+}
+
+.logo h1{
+    color: var(--red);
+    font-size: 30px;
+}
+
+.menu{
+    display: flex;
+}
+
+.menu .menu__item{
+    list-style: none;
+    margin: 10px;
+    padding: 0 5px;
+}
+
+.menu .menu__item a{
+    text-decoration: none;
+    color: var(--main);
+}
+
+.menu .menu__item .underline{
+    height: 2px;
+    width: 0;
+    background-color: var(--red);
+}
+
+.recipes__container .recipe .underline{
+    height: 5px;
+    width: 0;
+    background-color: var(--green);
+    margin: 5px 0;
+}
+
+.menu .menu__item:hover .underline,
+.recipes__container .recipe:hover .underline{
+    animation: line;
+    animation-duration: 0.3s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes line{
+    0%{width: 0;}
+    100%{ width: 100%;}
+}
+
+.search{
+    display: flex;
+    width: 250px;
+}
+
+.search__item{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+}
+
+.search__item form input{
+    width: 220px;
+    border: none;
+    border-bottom: 2px solid var(--green);
+    outline: none;
+}
+
+.search__item .fas{
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.fa-search{
+    color: var(--green);
+}
+
+.fa-times{
+    color: var(--red);
+}
+
+.search__item.hide{
+    display: none;
+}
+
+/* RECIPES */
+.recipes__container{
+    max-width: 1300px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 1rem auto;
+}
+
+.recipe{
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    margin: 1rem auto;
+    border: solid 1px var(--green);
+    border-radius: 20px;
+}
+
+.recipe img{
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    height: 250px;
+    object-fit: cover;
+}
+
+.recipe__info{
+    position: relative;
+    padding: 10px;
+    background-color: white;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.recipe__info::before{
+    position: absolute;
+    content: '';
+    top: -18%;
+    left: 0;
+    height: 20%;
+    width: 100%;
+    background-color: white;
+    clip-path: polygon(100% 0, 100% 100%, 0 100%);
+}
+
+.recipe__info small{
+    color: #bbb;
+}
+
+.recipe__info .recipe__title{
+    color: var(--main);
+    margin: 5px 0;
+    text-transform: uppercase;
+}
+
+.recipe__info p{
+    letter-spacing: 2px;
+    color: var(--main);
+}
+
+.recipe__info .recipe__btn{
+    border: none;
+    font-size: 16px;
+    margin: 10px 0;
+    cursor: pointer;
+    background-color: var(--green);
+    padding: 10px 20px;
+    color: var(--main);
+    border-radius: 10px;
+}
+
+
+/* MODAL */
+.modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal__container{
+    background-color: white;
+    display: flex;
+    max-width: 1200px;
+    height: 50vh;
+}
+
+.modal__container img{
+    width: 50%;
+    object-fit: cover;
+}
+
+.modal__info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    padding: 1rem;
+}
+
+.modal__info .modal__title{
+    font-size: 35px;
+    color: var(--main);
+    text-transform: uppercase;
+}
+
+.modal__info p{
+    margin: 1rem 0;
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+
+.modal__info h4{
+    color: var(--red);
+    font-size: 18px;
+    text-transform: uppercase;
+    border-bottom: solid 1px var(--green);
+    width: fit-content;
+}
+
+.modal__info li{
+    list-style: none;
+    margin: 10px 0;
+}

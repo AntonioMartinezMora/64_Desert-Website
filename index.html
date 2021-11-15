@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+    <title>Dessert Recipes</title>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <div class="nav__container">
+                <div class="logo">
+                    <h1>DessertRecipes</h1>
+                </div>
+                <div>
+                    <ul class="menu">
+                        <li class="menu__item">
+                            <a href="#">Baking</a>
+                            <div class="underline"></div>
+                        </li>
+                        <li class="menu__item">
+                            <a href="#">Healthy</a>
+                            <div class="underline"></div>
+                        </li>
+                        <li class="menu__item">
+                            <a href="#">Holidays</a>
+                            <div class="underline"></div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="search">
+                    <div class="search__item">
+                        <i class="fas fa-search search__icon"></i>
+                    </div>
+                    <div class="search__item hide">
+                        <form>
+                            <input type="text"
+                            class="search__input"
+                            placeholder="Search recipes"
+                            >
+                        </form>
+                        <i class="fas fa-times search__icon"></i>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <div class="recipes__container">
+            <!-- <div class="recipe">
+                <img src="https://images-gmi-pmc.edge-generalmills.com/7c1096c7-bfd0-4806-a794-1d3001fe0063.jpg" class="recipe__img">
+                <div class="recipe__info">
+                    <span class="recipe__date">
+                        <small>december 12 2021</small>
+                    </span>
+                    <h3 class="recipe__title">
+                        Cookies and cream cake
+                    </h3>
+                    <div class="underline"></div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum soluta provident laboriosam.</p>
+                    <button class="recipe__btn">
+                        See more
+                    </button>
+                </div>
+            </div> -->
+        </div>
+
+        <div class="modal">
+            <div class="modal__container">
+                <img src="https://images-gmi-pmc.edge-generalmills.com/7c1096c7-bfd0-4806-a794-1d3001fe0063.jpg" class="modal__img">
+                <div class="modal__info">
+                    <h3 class="modal__title">
+                        Sample title
+                    </h3>
+                    <p class="modal__descrip">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, architecto ratione. Et.
+                    </p>
+                    <h4>Ingredients</h4>
+                    <ul>
+                        <li id="ingred1">Ingredient 1</li>
+                        <li id="ingred2">Ingredient 2</li>
+                        <li id="ingred3">Ingredient 3</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
